@@ -6,10 +6,10 @@ type GenreWordPoints = {
   firstPVal?: number
 }
 
-const tteest : GenreWordPoints = { 
+const tteestrunsh : GenreWordPoints = {
   genre: 'test',
-  keyword: "done",
+  keyword: 'done',
   points: 1,
-  book: "erg",
+  book: 'erg',
   firstPVal: 235423
 }
