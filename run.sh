@@ -1,1 +1,0 @@
-cd src/backend && npx tsc
