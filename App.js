@@ -1,25 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import HomePage from './pages/HomePage';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-import { Button } from "@react-native-material/core";
-import { TextInput } from "@react-native-material/core";
+import Navigator from './routes/homeStack';
+
+const Stack = createNativeStackNavigator();
+
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Vital Tracker</Text>
-      <StatusBar style="auto" />
 
-      <TextInput variant="outlined" label="Username" style={{ margin: 2 }} />
-      <TextInput variant="outlined" label="Password" style={{ margin: 2 }} />
-      <Button title="login" style={{ alignSelf: "center", marginTop: 2 }}/>
-      <Button title="create account" style={{ alignSelf: "center", marginTop: 4 }}/>
+    <Navigator/>
 
-
-    </View>
   );
 }
 
