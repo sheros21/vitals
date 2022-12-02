@@ -8,10 +8,22 @@ import { TextInput } from "@react-native-material/core";
 
 
 export default function RecordData() {
+    const pressHandler = () => {
+        console.log("inputted");
+
+    }
+
     return (
-    <View style={styles.container}>
-        <Text>Enter Data</Text>
-        {/* <Button title="go to home" style={{ alignSelf: "center", marginTop: 4 }} onPress={pressHandler}/> */}
+    <View>
+        <Text>Vital Tracker</Text>
+        <View style={styles.container}>
+            <Text>Enter Data</Text>
+
+          
+            <TextInput variant="outlined" label="Password" style={{ margin: 2 }} />
+            <Button title="submit" style={{ alignSelf: "center", marginTop: 4 }} onPress={pressHandler}/>
+
+        </View>
     </View>
     );
 }
