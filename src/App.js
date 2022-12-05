@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import HomePg from './pages/HomePg';
+import CreateAccountPg from './pages/CreateAccountPg';
+import SettingsPg from './pages/SettingsPg';
+import AnalyticsPg from './pages/AnalyticsPg';
+import TrackPg from './pages/TrackPg';
+import OnboardPg from './pages/OnboardPg';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<BrowserRouter>
+    <Routes>
+    {/* <Route element={<PageLayout> <Outlet /> </PageLayout>}> */}
+      
+      <Route path="/" element={<HomePg/>}/>
+      <Route path="/create-account" element={<CreateAccountPg/>}/>
+      <Route path="/onboard" element={<OnboardPg/>}/>
+      <Route path="/track" element={<TrackPg/>}/>
+      <Route path="/analytics" element={<AnalyticsPg/>}/>
+      <Route path="/settings" element={<SettingsPg/>}/>
+      <Route path="/e" element={<Report/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
