@@ -7,6 +7,7 @@ import SettingsPg from './pages/SettingsPg';
 import AnalyticsPg from './pages/AnalyticsPg';
 import TrackPg from './pages/TrackPg';
 import OnboardPg from './pages/OnboardPg';
+import Report from './components/Report';
 
 
 export default function App() {

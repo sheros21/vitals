@@ -5,8 +5,22 @@ import { Link } from 'react-router-dom';
 // MUI imports
 import TextField from '@mui/material/TextField';
 
+
+import dayjs, { Dayjs } from 'dayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DesktopTimePicker } from '@mui/x-date-pickers/DesktopTimePicker';
+
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+
 export default function CreateAccountPg(){
     const [textValue, setTextValue] = useState("");
+
+    const [value, setValue] = useState(
+        dayjs('2023-01-01T00:00:00.000')
+    );
+
+
 
     const handleTextFieldChange = (e) => {
         console.log("pass");
@@ -30,8 +44,18 @@ export default function CreateAccountPg(){
                 <TextField id="outlined-basic" label="Username" variant="outlined" value = {textValue} onChange = {handleTextFieldChange} />
                 <TextField id="outlined-basic" label="Password" variant="outlined" value = {textValue} onChange = {handleTextFieldChange} />
                 {/* TODO change this to calendar */}
-                <TextField id="outlined-basic" label="Birthday" variant="outlined" value = {textValue} onChange = {handleTextFieldChange} />
-                
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DesktopDatePicker
+                        label="Birthday"
+                        value={value}
+                        minDate={dayjs('2017-01-01')}
+                        onChange={(newValue) => {
+                            setValue(newValue);
+                        }}
+                        
+                        renderInput={(params) => <TextField {...params} />}
+                        />
+                </LocalizationProvider>
                    
                 <Button  size="large" style={{
                     borderRadius: 25,

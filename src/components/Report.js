@@ -3,33 +3,33 @@ import { Box, Button, Card, CardContent, CardHeader, Divider, useTheme } from '@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-export default Report = (props) => {
+export default function Report(props){
   const theme = useTheme();
 
   const data = {
     datasets: [
       {
-        backgroundColor: '#3F51B5',
-        barPercentage: 0.5,
-        barThickness: 12,
-        borderRadius: 4,
-        categoryPercentage: 0.5,
+        // backgroundColor: '#3F51B5',
+        // barPercentage: 0.5,
+        // barThickness: 12,
+        // borderRadius: 4,
+        // categoryPercentage: 0.5,
         data: [18, 5, 19, 27, 29, 19, 20],
-        label: 'This year',
-        maxBarThickness: 10
-      },
-      {
-        backgroundColor: '#EEEEEE',
-        barPercentage: 0.5,
-        barThickness: 12,
-        borderRadius: 4,
-        categoryPercentage: 0.5,
-        data: [11, 20, 12, 29, 30, 25, 13],
-        label: 'Last year',
-        maxBarThickness: 10
+        // label: 'This year',
+        // maxBarThickness: 10
       }
-    ],
-    labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 aug']
+    //   {
+    //     // backgroundColor: '#EEEEEE',
+    //     // barPercentage: 0.5,
+    //     // barThickness: 12,
+    //     // borderRadius: 4,
+    //     // categoryPercentage: 0.5,
+    //     data: [11, 20, 12, 29, 30, 25, 13],
+    //     // label: 'Last year',
+    //     // maxBarThickness: 10
+      
+    ]
+    // labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 aug']
   };
 
   const options = {
@@ -104,7 +104,7 @@ export default Report = (props) => {
         >
           <Bar
             data={data}
-            options={options}
+            // options={options}
           />
         </Box>
       </CardContent>

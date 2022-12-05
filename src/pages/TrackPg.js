@@ -19,7 +19,7 @@ import { DesktopTimePicker } from '@mui/x-date-pickers/DesktopTimePicker';
 
 // for calednar
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { Report } from '../components/Report';
+
 
 export default function TrackPg(){
     const NAME = 'Abhi'
@@ -120,9 +120,7 @@ export default function TrackPg(){
     </Box>
 
             </Stack>
-            <Report>
-
-            </Report>
+  
         </div>
 
     );
