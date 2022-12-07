@@ -8,11 +8,14 @@ import AnalyticsPg from './pages/AnalyticsPg';
 import TrackPg from './pages/TrackPg';
 import OnboardPg from './pages/OnboardPg';
 import Report from './components/Report';
+import NavBar from './components/NavBar';
 
 
 export default function App() {
   return (
-<BrowserRouter>
+
+    <BrowserRouter>
+    <NavBar></NavBar>
     <Routes>
     {/* <Route element={<PageLayout> <Outlet /> </PageLayout>}> */}
       
